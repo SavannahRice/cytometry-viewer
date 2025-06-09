@@ -72,7 +72,7 @@ export default function ResultQuery() {
       time_operator: filters.timeOperator,
     };
 
-    const res = await axios.get("http://localhost:8000/api/results/filter", {
+    const res = await axios.get("/api/results/filter", {
       params: params,
     });
     setResults(res.data.results);

@@ -19,7 +19,7 @@ export default function ProjectTable() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/results", {
+      const response = await axios.get("/api/results", {
         withCredentials: true,
       });
       setResults(response.data.projects);

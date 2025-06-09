@@ -11,7 +11,7 @@ export function CsrfProvider({ children }) {
 
   useEffect(() => {
     async function fetchCsrf() {
-      const response = await fetch('http://localhost:8000/csrf/', {
+      const response = await fetch('/csrf/', {
         credentials: 'include',
       });
       const data = await response.json();

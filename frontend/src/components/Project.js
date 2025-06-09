@@ -23,13 +23,6 @@ import {
 import Plot from "react-plotly.js";
 import { tTestTwoSample } from "simple-statistics";
 
-// sample: the sample id as in column sample in cell-count.csv
-// total_count: total cell count of sample
-// population: name of the immune cell population (e.g. b_cell, cd8_t_cell, etc.)
-// count: cell count
-// percentage: relative frequency in percentage
-// with the following columns: sample_id, population, count, total_count, and relative_frequency.
-
 const columns = [
   { field: "id", headerName: "Cell ID", width: 90, hide: true },
   {
@@ -73,7 +66,7 @@ export default function Project() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/results/${projectId}`,
+        `/api/results/${projectId}`,
         {
           withCredentials: true,
         }

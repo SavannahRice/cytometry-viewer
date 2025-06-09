@@ -41,7 +41,7 @@ export default function Import() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/import",
+        "/api/import",
         formData,
         {
           headers: {

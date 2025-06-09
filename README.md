@@ -97,27 +97,7 @@ Ensure you have the following installed on your machine:
 
 ### Build and Run the Application
 
-1. Clone the repository to your local machine:
-```
-git clone https://github.com/yourusername/react_django_starter.git
-cd react_django_starter
-```
-2. Create a .env File
-
-      Create a .env file in the root directory of the project and add the necessary environment variables:
-   ```
-   DJANGO_SECRET_KEY=your_secret_key
-   DEBUG=True
-   DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
-   DATABASE_ENGINE=postgresql
-   DATABASE_NAME=cytometry-db
-   DATABASE_USERNAME=dbuser
-   DATABASE_PASSWORD=dbpassword
-   DATABASE_HOST=db
-   DATABASE_PORT=5432
-   ```
-
-3. Build and Start the Containers
+1. Build and Start the Containers
 
    Use Docker Compose to build and start the containers. This command will download the necessary images, build the application, and start the services defined in the docker-compose.yml file:
 
@@ -126,7 +106,7 @@ cd react_django_starter
    ```
    This process may take a few minutes the first time as Docker downloads dependencies and builds the images.
 
-4. Run Database Migrations
+2. Run Database Migrations
 
    The migration should run automatically. In case it doesn't, once the containers are up and running, 
    open a new terminal window and navigate to the project directory. Run the following command to apply database migrations:
@@ -135,12 +115,12 @@ cd react_django_starter
    ```
    This command runs the Django migration inside the django-web service container.
 
-5. Access the Application
+3. Access the Application
 
    Django Backend: Open your browser and go to http://localhost:8000 to access the Django backend.
    React Frontend: Open your browser and go to http://localhost:3000 to access the React frontend.
 
-6. Stopping the Application
+4. Stopping the Application
 
    To stop the application, press Ctrl+C in the terminal where the docker compose up command is running. Alternatively, you can run:
    ```
