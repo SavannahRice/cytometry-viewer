@@ -1,6 +1,28 @@
 # Cytometry Viewer
 
-This project is a fullstack application built with Django as the backend and React as the frontend.
+This project is a simple fullstack application built with Django as the backend and React as the frontend.
+
+## Images
+### Main Page
+The main landing page of the app displays all imported projects.
+![Screenshot 2025-06-09 at 5 04 59 PM](https://github.com/user-attachments/assets/b175c029-4100-465a-8b6d-ce3eb79a04cb)
+
+### Data Query
+The data query page allows user's to query database data with a set of filters.
+
+https://github.com/user-attachments/assets/3474f2a2-a337-4d4c-aaec-ceabc899a432
+
+### Project Details Page
+The project detail page shows a table with sample data as well as relevant charts.
+
+https://github.com/user-attachments/assets/bf1842b4-f25c-4d46-9ac4-93179c082b1f
+
+### Import
+The import page allows user's to import a csv.
+
+
+https://github.com/user-attachments/assets/42042b50-7dbf-491a-a4dd-24cca6f7b73a
+
 
 ## Project Structure
 
@@ -32,6 +54,10 @@ cytometry-viewer
 │           └── ExampleComponent.js
 └── README.md
 ```
+
+## Database Models
+![Model databases](https://github.com/user-attachments/assets/25fa9bd6-ff2c-4d8f-8c52-a48e0cd5497c)
+
 
 ## Backend Setup
 
