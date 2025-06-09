@@ -19,9 +19,7 @@ https://github.com/user-attachments/assets/bf1842b4-f25c-4d46-9ac4-93179c082b1f
 
 ### Import
 The import page allows user's to import a csv.
-
-
-https://github.com/user-attachments/assets/42042b50-7dbf-491a-a4dd-24cca6f7b73a
+![Screenshot 2025-06-09 at 5 57 46 PM](https://github.com/user-attachments/assets/03b09738-a4b4-4bce-b28b-e320ec561092)
 
 
 ## Project Structure
