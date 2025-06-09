@@ -52,8 +52,6 @@ const columns = [
     headerName: "Relative Frequency (%)",
     type: "number",
     width: 180,
-
-    // valueFormatter: ({ value }) => `${value.toFixed(2)}%`,
   },
 ];
 
@@ -85,7 +83,7 @@ export default function Project() {
   }, []);
 
   const pbmcRows = rows.filter(
-    (row) => row.sample_type === "PBMC" // or "blood" if that's the value
+    (row) => row.sample_type === "PBMC" 
   );
 
   const grouped = {
@@ -143,7 +141,6 @@ export default function Project() {
       const { responders, nonResponders, population } = pop;
       // Only test if both groups have at least 2 values
       if (responders.length > 1 && nonResponders.length > 1) {
-        // Mann-Whitney U test (non-parametric, good for small samples)
         const res = tTestTwoSample(responders, nonResponders, 0);
             return {
             population,
