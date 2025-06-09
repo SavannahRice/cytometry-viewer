@@ -38,6 +38,11 @@ WORKDIR /app
 # Copy application code
 COPY --chown=appuser:appuser . .
 
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
+
 # Switch to non-root user
 USER appuser
  

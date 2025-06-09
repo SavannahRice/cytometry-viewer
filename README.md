@@ -1,11 +1,11 @@
-# My Fullstack App
+# Cytometry Viewer
 
 This project is a fullstack application built with Django as the backend and React as the frontend.
 
 ## Project Structure
 
 ```
-my-fullstack-app
+cytometry-viewer
 ├── backend
 │   ├── manage.py
 │   ├── requirements.txt
@@ -108,9 +108,9 @@ cd react_django_starter
    ```
    DJANGO_SECRET_KEY=your_secret_key
    DEBUG=True
-   DJANGO_ALLOWED_HOSTS=localhost
-   DATABASE_ENGINE=postgresql_psycopg2
-   DATABASE_NAME=dockerdjango
+   DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
+   DATABASE_ENGINE=postgresql
+   DATABASE_NAME=cytometry-db
    DATABASE_USERNAME=dbuser
    DATABASE_PASSWORD=dbpassword
    DATABASE_HOST=db
@@ -128,7 +128,8 @@ cd react_django_starter
 
 4. Run Database Migrations
 
-   Once the containers are up and running, open a new terminal window and navigate to the project directory. Run the following command to apply database migrations:
+   The migration should run automatically. In case it doesn't, once the containers are up and running, 
+   open a new terminal window and navigate to the project directory. Run the following command to apply database migrations:
    ```
    docker compose run django-web python manage.py migrate
    ```
@@ -147,6 +148,9 @@ cd react_django_starter
    ```
    This command stops and removes the containers, networks, and volumes created by docker compose up.
 
+## Generate Data
+
+This project does not seed data in the db to begin with. In order to load data, go to the "Import" page in the app and load the cell-count.csv file.
 
 ## Contributing
 

@@ -1,11 +1,20 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.db.models import Sum
+
+
+class Scientist(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+    company = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
 
 
 class Project(models.Model):
     project_name = models.CharField(max_length=255)
     date = models.DateField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(Scientist, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.project_name
@@ -29,11 +38,14 @@ class Subject(models.Model):
 class Sample(models.Model):
     sample_name = models.CharField(max_length=255)
     sample_type = models.CharField(max_length=255)
-    time_from_treatment = models.IntegerField()
+    time_from_treatment_start = models.IntegerField(null=True, blank=True)  # Allow null for 'healthy' subjects
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.sample_name
+
+    def total_cell_count(self):
+        return self.cell_set.aggregate(total=Sum('count'))['total'] or None
     
 
 class Cell(models.Model):
@@ -48,4 +60,4 @@ class Cell(models.Model):
     sample = models.ForeignKey(Sample, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.type} ({self.count})"
+        return f'{self.type} ({self.count})'

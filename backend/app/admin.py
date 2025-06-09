@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Project, Subject, Sample, Cell
+from .models import Project, Subject, Sample, Cell, Scientist
 
-admin.site.register([Project, Subject, Sample, Cell])
+admin.site.register([Scientist, Project, Subject, Sample, Cell])
