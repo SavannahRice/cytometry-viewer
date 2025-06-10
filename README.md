@@ -14,6 +14,8 @@ https://github.com/user-attachments/assets/3474f2a2-a337-4d4c-aaec-ceabc899a432
 
 ### Project Details Page
 The project detail page shows a table with sample data as well as relevant charts.
+![Screenshot 2025-06-09 at 6 03 46 PM](https://github.com/user-attachments/assets/513b90ae-4ac0-4dc2-89d5-7b4794522ef5)
+
 
 https://github.com/user-attachments/assets/bf1842b4-f25c-4d46-9ac4-93179c082b1f
 
